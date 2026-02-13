@@ -1,170 +1,102 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>For My Mamsh 💗</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day!</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-    body {
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: radial-gradient(circle at top, #3a0f4c, #120018);
-        font-family: 'Montserrat', sans-serif;
-        color: #fff;
-        overflow-y: auto; /* ✅ allow scroll */
-    }
-
-    .card {
-        position: relative;
-        z-index: 5;
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(18px);
-        border-radius: 25px;
-        padding: 40px;
-        max-width: 900px;
-        width: 90%;
-        max-height: 85vh;            /* ✅ limit height */
-        overflow-y: auto;            /* ✅ internal scroll */
-        text-align: center;
-        box-shadow: 0 0 40px rgba(255, 105, 180, 0.25);
-        animation: floatCard 6s ease-in-out infinite;
-    }
-
-    @keyframes floatCard {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-    }
-
-    h1 {
-        font-family: 'Playfair Display', serif;
-        font-size: 2.6em;
-        margin-bottom: 10px;
-        color: #ffb3ec;
-    }
-
-    .subtitle {
-        font-size: 1em;
-        opacity: 0.8;
-        margin-bottom: 25px;
-    }
-
-    button {
-        background: linear-gradient(45deg, #ff8fd8, #b56cff);
-        border: none;
-        padding: 14px 35px;
-        font-size: 1.1em;
-        border-radius: 40px;
-        color: #fff;
-        cursor: pointer;
-        box-shadow: 0 0 20px rgba(255, 143, 216, 0.6);
-        transition: 0.3s;
-    }
-
-    button:hover {
-        transform: scale(1.1);
-    }
-
-    #message {
-        display: none;
-        margin-top: 30px;
-        font-family: 'Dancing Script', cursive;
-        font-size: 1.55em;
-        line-height: 1.9;
-        color: #ffe6f7;
-        text-align: left;
-    }
-
-    #message p {
-        margin-bottom: 20px; /* ✅ paragraph spacing */
-    }
-
-    .heart {
-        position: absolute;
-        z-index: 1;
-        font-size: 1.2em;
-        animation: floatHearts 6s linear infinite;
-        opacity: 0.7;
-        pointer-events: none;
-    }
-
-    @keyframes floatHearts {
-        0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
-        20% { opacity: 1; }
-        100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
-    }
-</style>
-</head>
-
-<body>
-
-<div class="card">
-    <h1>psst… 👀</h1>
-    <div class="subtitle">This message unlocks something soft, loud, and very mamsh-coded</div>
-    <button id="openBtn">Open the Letter 💌</button>
-
-    <div id="message">
-        <p>My dearest mamsheddd,</p>
-
-        <p>Happy Valentine's Day!<br>
-        Kang, Teya, Ang-ang, and Rayray 💗</p>
-
-        <p>Thank you for the unending laags and chikas every time we gather.  
-        Your presence alone already makes me happy, and I’m so grateful to have you girls—even if panagsa lang ta maghimamat.</p>
-
-        <p><strong>To Chikay,</strong><br>
-        I won’t go easy on you (you know that), but you already know how much you mean to me.  
-        I love you—lifetime.</p>
-
-        <p><strong>To Althea,</strong><br>
-        You deserve good things in life. Never settle for “dare lang.”  
-        Thank you for making me feel loved. I love you for that—HEHE.</p>
-
-        <p><strong>To Anelyn / Ang-ang,</strong><br>
-        Thank you for listening to my random chikas and for always giving me your smile.  
-        It really makes my day, especially at school. I love you, mamsh.  
-        Stay strong kamo ♡</p>
-
-        <p><strong>To Rayray,</strong><br>
-        We had our awkward moments because of unnecessary situations, but I’m glad we’re back on track.  
-        Thank you for bringing joy to the circle—you always make us laugh.  
-        You’re unique, and you deserve someone who can truly reciprocate your love.  
-        I love you.</p>
-
-        <p>Always know your worth, mamsh.<br>
-        Love you endlessly 🌟</p>
-    </div>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("openBtn");
-    const msg = document.getElementById("message");
-    let opened = false;
-
-    btn.addEventListener("click", () => {
-        if (opened) return;
-        opened = true;
-
-        msg.style.display = "block";
-
-        for (let i = 0; i < 30; i++) {
-            const heart = document.createElement("div");
-            heart.className = "heart";
-            heart.textContent = ["💗","💖","✨","🌸"][Math.floor(Math.random() * 4)];
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDelay = Math.random() * 3 + "s";
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 6000);
+    <style>
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(to bottom right, #ffe6f0, #ffe6e6);
+            text-align: center;
+            padding: 50px;
+            color: #8b1e3f;
         }
-    });
-});
-</script>
 
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #c9184a;
+        }
+
+        button {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        button:hover {
+            background-color: #c9184a;
+            transform: scale(1.05);
+        }
+
+        #message {
+            display: none;
+            font-size: 1.4em;
+            margin-top: 30px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #message p:first-child {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2em;
+            color: #c9184a;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff4d6d;
+            font-size: 2em;
+            animation: fall 3s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { top: -10px; opacity: 1; }
+            100% { top: 100vh; opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Click to Reveal Your Valentine's Surprise!</h1>
+    <button onclick="showMessage()">Open My Heart</button>
+    <div id="message">
+        <p>My dearest Meir,</p>
+        <p>Happy Valentine's Day, my love. Even with the miles between us and the quiet stretches that sometimes feel endless, today my whole world is wrapped around you. You're the first thought in my morning, the gentle warmth in my chest when I think of your voice calling me "love," and the person I cherish more deeply than I can ever put into words. I see how heavy everything is for you right now—the military obligations that pull you away, that big call-up message, the long days where your phone has to stay silent because duty demands it... and then carrying your business all on your own, with so little time left even for family or a moment to breathe. It aches knowing you're not okay, that you're making such hard choices just to keep going. But more than anything, it fills me with the deepest pride and endless love. I'm so proud of you, love—in everything you do. Proud of the strength you carry so quietly, the responsibility you take on without complaint, the way you serve with honor even when it's exhausting, the dedication you pour into your business to keep it standing, and the heart that still finds ways to reach out to me with love and care. You're incredible, my soldier—brave, kind, and so worthy of all the good things. I admire you more every day, and it makes my love for you grow even bigger in these quiet moments. I don't know if we'll get to talk sooner or later—maybe tomorrow brings a message, maybe it's weeks from now when things ease a little. The waiting can feel lonely, the not-knowing a bit heavy sometimes. But my love for you never pauses. It stays steady, soft, and true, growing stronger because I believe in us—in the "love you forever" you shared, in the way God holds our paths close, and in the beautiful connection we have no matter the distance or silence. You're my favorite person, my calm in the storm, my everything. I love you in the quietest, sweetest, most endless ways. Happy Valentine's Day, my love—may today wrap you in warmth and remind you that someone here is so incredibly proud of you, loving you with her whole heart. </p>
+
+        <p>With all my love,</p>
+        <p>Tangi</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+            // Add falling hearts animation
+            for (let i = 0; i < 20; i++) {
+                let heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDelay = Math.random() * 2 + 's';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 3000);
+            }
+        }
+    </script>
 </body>
 </html>
